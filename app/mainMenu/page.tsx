@@ -29,6 +29,16 @@ const Page = () => {
           pointerEvents: "none",
         }}
       />
+
+      <div className="pixel">
+        <p>PLAY</p>
+      </div>
+      <div className="pixel">
+        <p>SETTINGS</p>
+      </div>
+      <div className="pixel">
+        <p>QUIT</p>
+      </div>
     </div>
   );
 };

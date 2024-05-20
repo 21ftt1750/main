@@ -1,29 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=VT323");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.center-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.pixel,
+.pixel2 {
+  box-shadow: 0px 3px 0px black;
+  font-size: 25px;
+  color: white;
+  height: auto;
+  margin: 10px;
+  font-family: "VT323";
+  z-index: 2;
+
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.centered-button {
-  margin: 10px;
-  padding: 5px 15px;
-  background-color: #8bc34a; /* Green background for pixelated look */
-  color: #fff; /* White text color */
-  border: 2px solid #8bc34a; /* Green border */
-  border-radius: 3px; /* Slight border radius */
-  font-family: "Arial", sans-serif; /* Font style */
-  font-size: 16px; /* Font size */
-  cursor: pointer;
-  text-transform: uppercase; /* Uppercase text */
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+.pixel:active,
+.pixel2:active {
+  top: 2px;
+  box-shadow: 0px 1px 0px black;
+}
+
+.pixel {
+  line-height: 0;
+
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+
+  border-style: solid;
+
+  border-width: 20px;
+  -moz-border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
+  -webkit-border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
+  -o-border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
+  border-image: url(https://i.imgur.com/sREM8Yn.png) 20 stretch;
+}
+
+.pixel p {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: auto;
+  text-align: center;
+  margin: -20px -20px;
+  line-height: 20px;
+  padding: 10px 20px;
+
+  background: #000000;
+  background: linear-gradient(135deg, transparent 10px, #000000 0) top left,
+    linear-gradient(225deg, transparent 10px, #000000 0) top right,
+    linear-gradient(315deg, transparent 10px, #000000 0) bottom right,
+    linear-gradient(45deg, transparent 10px, #000000 0) bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(
+      circle at 0 0,
+      rgba(204, 0, 0, 0) 14px,
+      #000000 15px
+    ),
+    radial-gradient(circle at 100% 0, rgba(204, 0, 0, 0) 14px, #000000 15px),
+    radial-gradient(circle at 100% 100%, rgba(204, 0, 0, 0) 14px, #000000 15px),
+    radial-gradient(circle at 0 100%, rgba(204, 0, 0, 0) 14px, #000000 15px);
 }
 
 .container {
