@@ -80,6 +80,17 @@
     radial-gradient(circle at 0 100%, rgba(204, 0, 0, 0) 14px, #000000 15px);
 }
 
+.text-container {
+  color: black;
+  font-family: "VT323", monospace;
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 .container {
   position: relative;
   display: flex;

@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import mainMenu from "/images/mainMenu.png";
+import Link from "next/link";
 
 const Page = () => {
   useEffect(() => {
@@ -30,9 +31,11 @@ const Page = () => {
         }}
       />
 
-      <div className="pixel">
-        <p>PLAY</p>
-      </div>
+      <Link href="/chapterOne" passHref>
+        <div className="pixel">
+          <p>PLAY</p>
+        </div>
+      </Link>
       <div className="pixel">
         <p>SETTINGS</p>
       </div>
