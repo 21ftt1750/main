@@ -16,7 +16,7 @@ const Page = () => {
       images.forEach((image, index) => {
         setTimeout(() => {
           image.classList.add("show", "slam");
-        }, index * 2000); // Stagger the slams
+        }, index * 1500); // Stagger the slams
       });
     }
 
@@ -29,7 +29,7 @@ const Page = () => {
       // Redirect to gameTitle after the images have flown away
       setTimeout(() => {
         window.location.href = "/gameTitle"; // Adjust the path as needed
-      }, 1000); // Adjust the delay as needed
+      }, 2000); // Adjust the delay as needed
     }
 
     // Example usage
@@ -38,11 +38,11 @@ const Page = () => {
     // Add event listener to trigger the fly-away effect after some delay
     setTimeout(() => {
       flyAwayImages();
-    }, 7000); // Adjust the delay as needed
+    }, 5000); // Adjust the delay as needed
   }, []);
 
   return (
-    <div className="container">
+    <div className="container overflow-hidden">
       {images.map((image, index) => (
         <Image
           key={index}
